@@ -532,12 +532,28 @@ a:hover{
     padding-left: 20px;
     margin-left: 30px;
   }
-  
+  .skill-container img{
+    width: 4.5rem;
+    transform: rotate(var(--angle)) translateX(135px) rotate(var(--n-angle));
+  }
+  #secao-projetos{
+    padding-top: 0px;
+  }
 }
 
 @media(max-width: 375px){
   .sobre-curriculum{
-    padding-left: 20px;
+    font-size: .7rem;
+    padding-left: 30px;
+    padding-bottom: 15px;
+  }
+  .btn-down{
+    font-size: .8rem;
+    margin-left: 45px;
+  }
+  .skill-container img{
+    width: 4rem;
+    transform: rotate(var(--angle)) translateX(125px) rotate(var(--n-angle));
   }
 }
 
@@ -570,8 +586,8 @@ a:hover{
     width: 150px;
   }
   .sobre-curriculum{
-    font-size: .8rem;
-    text-align: center;
+    font-size: .6rem;
+    padding-bottom: 0;
   }
   .btn-down{
     font-size: .7rem;
@@ -580,5 +596,12 @@ a:hover{
     display: flex;
     flex-direction: column;
     margin-right: 20px;
+  }
+  .skill-container img{
+    width: 3.8rem;
+    transform: rotate(var(--angle)) translateX(115px) rotate(var(--n-angle));
+  }
+  #secao-projetos{
+    padding-top: 0px;
   }
 }
