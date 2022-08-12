@@ -210,7 +210,7 @@ a:hover{
 }
 
 .coluna-esquerda::before{
-  content: "Este sou eu !";
+  content: "This is me !";
   text-transform: capitalize;
   position: absolute;
   right: 0;
@@ -526,4 +526,4 @@ a:hover{
   .profissao{
     font-size: .5rem;
   }
-  
+}
