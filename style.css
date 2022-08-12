@@ -509,21 +509,76 @@ a:hover{
   .informacao{
     font-size: .7rem;
   }
-
-  .container-menu-skill{
-    
+  .btn-ct{
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+  }
+  .sobre{
+    padding: 100px 10vw;
   }
   .skill-container img{
     width: 4.9rem;
     height: auto;
   }
+  .sobre-mim-container{
+    grid-gap: 30px;
+  }
+  .sobre-curriculum{
+    padding-left: 10px;
+    padding-bottom: 30px;
+  }
+  .btn-down{
+    padding-left: 20px;
+    margin-left: 30px;
+  }
+  
 }
 
-@media(max-width: 394px){
+@media(max-width: 375px){
+  .sobre-curriculum{
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 320px){
   .first-heading{
-    font-size: 1.5rem;
+    font-size: 2rem;
+  }
+  .image{
+    display: none;
+  }
+  .first-content{
+    width: 100%;
+  }
+  .informacao{
+    font-size: .9rem;
+    text-align: center;
   }
   .profissao{
-    font-size: .5rem;
+    font-size: .8rem;
+  }
+  .btn-ct{
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+  }
+  .sobre{
+    padding: 100px 10vw;
+  }
+  .sobre-img{
+    width: 150px;
+  }
+  .sobre-curriculum{
+    font-size: .8rem;
+    text-align: center;
+  }
+  .btn-down{
+    font-size: .7rem;
+  }
+  .coluna-direita{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
   }
 }
