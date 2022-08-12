@@ -1,0 +1,529 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  position: relative;
+  background-color: #1d1d1d;
+  color: #fff;
+  font-family: 'roboto', sans-serif;
+}
+
+.logo, a {
+  text-transform: capitalize;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: #4331ca;
+  padding: 0 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9;
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+}
+
+.saudacao{
+  color: tomato;
+}
+
+.icon-1{
+  color: orange;
+}
+.icon-2{
+  color: greenyellow;
+}
+.icon-3{
+  color: cornflowerblue;
+}
+.icon-4{
+  color: orangered;
+}
+
+.desc{
+  list-style-type: none;
+  text-align: center;
+  margin-top: 20px;
+  padding: 30px auto;
+}
+
+.link{
+  text-transform: capitalize;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  position: relative;
+}
+
+.image{
+  width: 49%;
+  height: auto;
+  margin-left: 20px;
+}
+
+a{
+  color: #fff;
+  transition: 0.6s;
+}
+
+a:hover{
+  color: grey;
+}
+
+/* section principal*/
+.principal{
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+  padding: 0 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.first-content{
+  width: 50%;
+}
+
+.first-heading{
+  font-size: 5rem;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.profissao{
+  width: fit-content;
+  display: block;
+  margin: 10px 0 20px;
+  margin-left: auto;
+  text-transform: capitalize;
+  position: relative;
+  padding: 10px 20px;
+  color: #1d1d1d;
+  z-index: 2;
+}
+
+.profissao::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e3e3e3;
+  z-index: -1;
+  transform: skewX(15deg);
+}
+
+.profissao::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: 100px;
+  height: 2px;
+  background-color: #e3e3e3;
+}
+
+.informacao{
+  line-height: 30px;
+  margin-bottom: 50px;
+}
+
+.btn{
+  background-color: #4d35ff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 50px;
+  color: #fff;
+  text-transform: capitalize;
+  border: none;
+  transform: 0.6s;
+}
+
+.btn:hover{
+  background-color: #4331ca;
+  color: aliceblue;
+  padding: 12px 22px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* section - sobre */
+.sobre{
+  width: 100%;
+  height: auto;
+  padding: 50px 10vw;
+}
+
+.heading{
+  text-align: center;
+  font-weight: 500;
+  font-size: 3.6rem;
+  text-transform: capitalize;
+}
+
+.sub-heading{
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 10px;
+  opacity: 0.7;
+}
+
+.separador{
+  width: 25%;
+  margin: 20px auto;
+  position: relative;
+}
+
+.sobre-mim-container{
+  margin: 150px 0 100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-gap: 50px;
+}
+
+.coluna-esquerda, .coluna-direita{
+  position: relative;
+}
+
+.coluna-esquerda::before{
+  content: "Este sou eu !";
+  text-transform: capitalize;
+  position: absolute;
+  right: 0;
+  top: -20px;
+}
+
+.coluna-esquerda::after{
+  content: '';
+  position: absolute;
+  top: 0px;
+  right: 99px;
+  width: 50px;
+  height: 2px;
+  background-color: #fff;
+  transform-origin: right;
+  transform: rotate(-30deg);
+}
+
+.sobre-img{
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+  opacity: 0.8;
+}
+
+.sobre-curriculum{
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 35px;
+  margin-bottom: 40px;
+}
+
+/* skils */
+.heading2{
+  text-align: center;
+  font-weight: 500;
+  font-size: 3.6rem;
+}
+
+.separador2{
+  width: 100%;
+  height: 7px;
+  background-color: #4d35ff;
+  margin-bottom: 200px;
+}
+.container-menu-skill{
+  display: flex;
+  justify-content: center;
+  margin-top: -120px;
+}
+
+.skill-container{
+  display: grid;
+  grid-template-areas: "stack";
+  margin: 150px;
+}
+
+.skill-container > img{
+  grid-area: stack;
+
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: contain;
+
+  --n-angle: calc(-1 * var(--angle));
+
+  transform:
+    rotate(var(--angle))
+    translateX(150px)
+    rotate(var(--n-angle));
+}
+
+.btn2{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px black;
+  transition: 0.3s;
+}
+
+.btn2:hover{
+  width: 104px;
+  height: 104px;
+}
+
+/* projetos*/
+
+
+.sub-heading2{
+  text-align: center;
+  font-size: 1.2rem;
+  margin: -10px auto;
+  opacity: 0.7;
+  margin-top: -100px;
+  padding-bottom: 100px;
+}
+
+
+.btn-filtro:hover{
+  width: 101.5px;
+  height: 40.5px;
+  opacity: 0.4;
+  color: #fff;
+}
+
+/* projetos - views */
+.projetos-container{
+  width: 100%;
+  display: grid;
+  
+}
+
+.projetos-card{
+  position: relative;
+  cursor: pointer;
+  display: block;
+}
+
+.projetos-card img{
+  border-radius: 12px;
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 2px 2px 2px black;
+  display: flex;
+  margin: 0 auto;
+}
+
+.nome-projeto{
+  font-weight: 300;
+  font-size: 2.1rem;
+  text-align: center;
+  padding: 15px;
+}
+
+.descricao{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+  text-transform: capitalize;
+}
+
+/* contato */
+.formulario-contato{
+  width: 100%;
+  margin-top: -100px;
+  position: relative;
+}
+
+.formulario-contato input, .mensagem{
+  width: 100%;
+  display: block;
+  height: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  background: #fff;
+  color: #1d1d1d;
+  border: none;
+  outline: none;
+  margin: 30px 0;
+  resize: none;
+}
+
+.mensagem{
+  height: 200px;
+}
+
+.formulario-contato .nome{
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.nome input{
+  width: 49%;
+  margin: 0;
+}
+
+.formulario-contato .btn-contato{
+  display: flex;
+  margin: auto;
+  cursor: pointer;
+  transition: 0.6s;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 2px black;
+}
+
+.btn-contato{
+  width: 150px;
+  height: 46px;
+}
+
+/*---------  Media Query */
+@media (max-width: 916px){
+  .first-heading{
+    font-size: 4rem;
+  }
+
+  .sobre-img{
+    min-width: 49%;
+  }
+
+  .image{
+    width: 45%;
+  }
+}
+
+@media(max-width: 787px){
+  .first-content{
+    width: 45%;
+  }
+
+  .first-heading{
+    font-size: 3rem;
+  }
+
+  .heading, .heading2{
+    font-size: 2.6rem;
+  }
+
+  .profissao{
+    width: auto;
+  }
+
+  .image{
+    width: 49%;
+  }
+}
+
+@media(max-width: 590px){
+  .logo svg{
+    width: 120px;
+  }
+
+  .first-heading{
+    font-size: 2rem;
+  }
+
+  .heading{
+    padding-bottom: 40px;
+  }
+
+  .heading, .heading2{
+    font-size: 2rem;
+  }
+  .sub-heading{
+    margin-bottom: -50px;
+  }
+
+  .coluna-esquerda::before, .coluna-esquerda::after{
+    display: none;
+  }
+}
+
+@media(max-width: 562px){
+  .profissao{
+    font-size: .6rem;
+  }
+  .sobre-curriculum{
+    margin: 5px;
+    padding: 5px;
+  }
+  
+}
+
+@media(max-width: 504px){
+  .logo svg{
+    display: none;
+  }
+  .container{
+    justify-content: center;
+  }
+
+  .sobre-curriculum, .btn{
+    font-size: 1rem;
+    margin-left: 20px;
+  }
+}
+
+@media(max-width: 425px){
+  .sobre-img{
+    width: 170px;
+  }
+  .heading{
+    padding-bottom: 70px;
+  }
+
+  .sub-heading{
+    font-size: 1rem;
+    margin-bottom: -80px;
+  }
+  .informacao{
+    font-size: .7rem;
+  }
+
+  .container-menu-skill{
+    
+  }
+  .skill-container img{
+    width: 4.9rem;
+    height: auto;
+  }
+}
+
+@media(max-width: 394px){
+  .first-heading{
+    font-size: 1.5rem;
+  }
+  .profissao{
+    font-size: .5rem;
+  }
+  
